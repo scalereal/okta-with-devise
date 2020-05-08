@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OktaSpike</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <% if !session[:oktastate] %>
+      <%= link_to "Sign In Or Sign Up", user_oktaoauth_omniauth_authorize_path %>
+    <% else %>
+      <header>
+        <%= link_to "App Dashboard", users_path(), class: "item"%>
+        <%= link_to session[:oktastate][:info][:name], user_path(session[:oktastate][:uid]), class: "item" %>
+        <%= link_to "logout", sessions_destroy_path %>
+      </header>
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>
