@@ -4,17 +4,16 @@ Simple POC to show how to connect Okta to Devise Gem
 
 ## Installation
 
-First, Pull the code and create Databse
+First, Pull the code and create Database
 
 ``` rake db:create ```
 
-Next, Migrate Databse
+Next, Migrate Database
 
 ``` rake db:migrate ```
 
 ## Add Okta configuration in application.yml
 
-For eg,
 
 ```
 OKTA_CLIENT_ID: "YOUR-CLIENT-ID"
