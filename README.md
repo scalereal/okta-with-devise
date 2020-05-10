@@ -1,24 +1,33 @@
-# README
+# Okta <> Devise Integration
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple POC to show how to connect Okta to Devise Gem
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+First, Pull the code and create Databse
 
-* System dependencies
+``` rake db:create ```
 
-* Configuration
+Next, Migrate Databse
 
-* Database creation
+``` rake db:migrate ```
 
-* Database initialization
+## Add Okta configuration in application.yml
 
-* How to run the test suite
+For eg,
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+OKTA_CLIENT_ID: "YOUR-CLIENT-ID"
+OKTA_CLIENT_SECRET: "YOUR-CLIENT-SECRET"
+OKTA_ORG: "YOUR-OKTA-ORG"
+OKTA_DOMAIN: "oktapreview"
+OKTA_URL: "YOUR-OKTA-ORG-URL"
+OKTA_ISSUER: "YOUR-OKTA-ISSUER-URL"
+OKTA_AUTH_SERVER_ID: "YOUR-AUTH-SERVER-ID"
+OKTA_REDIRECT_URI: "http://localhost:3000/users/auth/oktaoauth/callback"
 
-* Deployment instructions
+```
 
-* ...
+## Start Rails Server
+
+``` localhost: 3000 ```
