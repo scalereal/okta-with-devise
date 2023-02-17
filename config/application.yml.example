@@ -1,0 +1,7 @@
+OKTA_CLIENT_ID: "0oa8cfmgwhf3qi3Ag5d7"
+OKTA_CLIENT_SECRET: "30EX-BM23GH0ppylLKKNHMyPKleeu7YRjZoCzwFa"
+OKTA_DOMAIN: "dev-28437110.okta.com"
+OKTA_URL: "https://dev-28437110.okta.com"
+OKTA_ISSUER: "https://dev-28437110.okta.com/oauth2/default"
+OKTA_AUTH_SERVER_ID: "default"
+OKTA_REDIRECT_URI: "http://localhost:3000/users/auth/oktaoauth/callback"
