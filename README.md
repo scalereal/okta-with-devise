@@ -4,29 +4,33 @@ Simple POC to show how to connect Okta to Devise Gem
 
 ## Installation
 
-First, Pull the code and create Database
 
-``` rake db:create ```
+1. First pull the code, install ruby `2.3.8` and run `bundle install`
+2. Copy configs
+```
+cp config/database.yml.example config/database.yml
+cp config/application.yml.example config/application.yml
+```
 
-Next, Migrate Database
+Create and migrate database
+```
+rake db:create
+rake db:migrate
+```
 
-``` rake db:migrate ```
-
-## Add Okta configuration in application.yml
-
+## Change Okta configuration in config/application.yml
 
 ```
 OKTA_CLIENT_ID: "YOUR-CLIENT-ID"
 OKTA_CLIENT_SECRET: "YOUR-CLIENT-SECRET"
-OKTA_ORG: "YOUR-OKTA-ORG"
 OKTA_DOMAIN: "oktapreview"
 OKTA_URL: "YOUR-OKTA-ORG-URL"
 OKTA_ISSUER: "YOUR-OKTA-ISSUER-URL"
 OKTA_AUTH_SERVER_ID: "YOUR-AUTH-SERVER-ID"
 OKTA_REDIRECT_URI: "http://localhost:3000/users/auth/oktaoauth/callback"
-
 ```
 
-## Start Rails Server
+## Start Rails Server 
+`rails s`
 
-``` localhost: 3000 ```
+Open link: [http://localhost:3000](http://localhost:3000)

@@ -15,6 +15,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def failure
-
+    debugger
   end
 end
